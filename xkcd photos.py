@@ -1,8 +1,9 @@
 import requests, bs4, os
+os.mkdir('C:\\Users\\Mgcoder\\Desktop\\xkcd')
 os.chdir('C:\\Users\\Mgcoder\\Desktop\\xkcd')
 
-url = 'https://xkcd.com'
-for page in range(2408, 0, -1):
+url = 'https://xkcd.com/'
+for page in range(1,2412):
     source = requests.get(url)
     soup = bs4.BeautifulSoup(source.text, 'lxml')
     # print(soup.prettify())

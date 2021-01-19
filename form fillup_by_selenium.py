@@ -12,12 +12,11 @@ if browser == 'chrome':
 elif browser == 'firefox':
     driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 else:
-    print('Give the correct path of %s'%browser)
+    print('Give the correct path of %s' % browser)
 url = 'https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/'
 driver.get(url)
 
-
-#Facebook login
+# Facebook login
 # driver.find_element_by_css_selector('div._6lux>input#email').send_keys('03059601725')
 # driver.find_element_by_css_selector('div._6lux>input#pass').send_keys('fool_751')
 # driver.find_element_by_css_selector('div._6ltg>button#u_0_b').click()
@@ -52,13 +51,25 @@ driver.get(url)
 
 # Generic method for Jquery dropdown
 # url = 'https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/'
-
-
-
-
-
-
-
+# def drop_down(option_list, value):
+#     if not value[0] == 'all':
+#         for option in option_list: # for getting options
+#             print(option.text)
+#             for i in range(len(value)): # for index of value_list
+#                 if option.text == value[i]:
+#                     option.click()
+#                     break
+#     else:
+#         try:
+#             for option in option_list:
+#                 option.click()
+#         except Exception as e:
+#             print(e)
+#
+# value_list = ['choice 1','choice 2'] # list for select value
+# driver.find_element(By.ID, 'justAnInputBox').click()
+# ele = driver.find_elements(By.CSS_SELECTOR, 'span.comboTreeItemTitle')
+# drop_down(ele,value_list)
 
 
 
